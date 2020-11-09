@@ -13,11 +13,43 @@ body {
   font-size: 2rem;
   font-weight: 600;
   line-height: 2.2rem;
-  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
 .mainpage__body {
   margin-left: 4vw;
   margin-right: 4vw;
+}
+
+.searchbar__container {
+  width: 100%;
+  position: relative;
+}
+
+.searchbar__label {
+  color: #2a2a2a;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  font-weight: 400;
+}
+
+.searchbar__input {
+  width: 40%;
+  height: 2.5rem;
+  border: 1px solid #a8a8a8;
+  border-radius: 5px;
+  margin: 0.2rem;
+  padding-left: 0.5rem;
+}
+
+.searchbar__button {
+  width: 125px;
+  height: 2.5rem;
+  color: #f2f2f2;
+  background-color: #378a0c;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  margin-left: 5px;
 }
