@@ -2,15 +2,15 @@ import React from 'react';
 
 import { func, string } from 'prop-types';
 
-const Button = ({ type, text, click }) => {
+const Button = ({ type, text, click, style }) => {
   return (
-    <button type={type} onClick={click} className="searchbar__button">
+    <button type={type} onClick={click} className={style}>
       {text}
     </button>
   );
 };
 
-Button.prototypes = {
+Button.propTypes = {
   type: string.isRequired,
   text: string.isRequired,
   click: func,

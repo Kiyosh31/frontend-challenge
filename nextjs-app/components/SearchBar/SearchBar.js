@@ -27,7 +27,7 @@ const SearchBar = () => {
           onChange={inputChangedHandler}
           value={inputValue}
         />
-        <Button type="submit" text="Filter" />
+        <Button type="submit" text="Filter" style="searchbar__button" />
       </form>
     </div>
   );

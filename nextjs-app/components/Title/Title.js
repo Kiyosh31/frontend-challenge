@@ -5,7 +5,7 @@ const Title = ({ title }) => {
   return <h1 className="mainpage__title">{title}</h1>;
 };
 
-Title.protoTypes = {
+Title.propTypes = {
   title: string.isRequired,
 };
 
