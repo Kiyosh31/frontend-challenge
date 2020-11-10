@@ -13,7 +13,7 @@ const Button = ({ type, text, click, style }) => {
 Button.propTypes = {
   type: string.isRequired,
   text: string.isRequired,
-  click: func,
+  click: func.isRequired,
 };
 
 export default Button;

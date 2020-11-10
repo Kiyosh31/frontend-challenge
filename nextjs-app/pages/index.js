@@ -3,6 +3,8 @@ import React from 'react';
 import Title from '../components/Title/Title';
 import SearchBar from '../components/SearchBar/SearchBar';
 import CampersList from '../components/CampersList/CampersList';
+import Spinner from '../components/Spinner/Spinner';
+import PaginationButton from '../components/PaginationButton/PaginationButton';
 
 import Pagination from '../utils/Pagination';
 
@@ -14,6 +16,8 @@ export default function Home() {
       <Title title="Campervans" />
       <SearchBar />
       <CampersList dataList={data} />
+      <PaginationButton click={() => {}} />
+      {!data && <Spinner />}
     </div>
   );
 }

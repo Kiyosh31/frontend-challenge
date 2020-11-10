@@ -4,9 +4,9 @@ import instace from './instance';
 
 const Pagination = (initialType = '', initialFrom = 0, initialLimit = 10, initialData = []) => {
   const [data, setData] = useState(initialData);
-  const [type] = useState(initialType);
-  const [from] = useState(initialFrom);
-  const [limit] = useState(initialLimit);
+  const [type, setType] = useState(initialType);
+  const [from, setFrom] = useState(initialFrom);
+  const [limit, setLimit] = useState(initialLimit);
 
   const loadData = async () => {
     const params = `?page[limit]=${limit}&page[offset]=${
@@ -20,6 +20,8 @@ const Pagination = (initialType = '', initialFrom = 0, initialLimit = 10, initia
           setData(response.data.data);
         } else if (response.data.data.length) {
           setData([...data, response.data.data]);
+        } else {
+          setData([]);
         }
       })
       .catch(err => console.log(err));
@@ -27,9 +29,9 @@ const Pagination = (initialType = '', initialFrom = 0, initialLimit = 10, initia
 
   useEffect(() => {
     loadData();
-  }, []);
+  }, [!data]);
 
-  return [data, from, limit];
+  return [data, setData, from, setFrom, limit, setLimit, type, setType];
 };
 
 export default Pagination;
