@@ -9,15 +9,15 @@ import PaginationButton from '../components/PaginationButton/PaginationButton';
 import Pagination from '../utils/Pagination';
 
 export default function Home() {
-  const [data] = Pagination('camper-van', 0, 10);
+  const [data, from, setFrom, loading] = Pagination('camper-van', 0, 10, [], true);
 
   return (
     <div className="max-w-screen-xl mx-auto mt-8 mainpage__body">
       <Title title="Campervans" />
       <SearchBar />
       <CampersList dataList={data} />
-      <PaginationButton click={() => {}} />
-      {!data && <Spinner />}
+      <PaginationButton click={() => setFrom(from + 1)} />
+      {loading && <Spinner />}
     </div>
   );
 }
