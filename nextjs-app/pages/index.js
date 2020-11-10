@@ -16,7 +16,7 @@ export default function Home() {
       <Title title="Campervans" />
       <SearchBar />
       <CampersList dataList={data} />
-      <PaginationButton click={() => setFrom(from + 1)} />
+      {!loading && <PaginationButton click={() => setFrom(from + 1)} />}
       {loading && <Spinner />}
     </div>
   );
