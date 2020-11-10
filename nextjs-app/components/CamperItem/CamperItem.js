@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { string } from 'prop-types';
+import { string, number } from 'prop-types';
 
 import Image from '../Image/Image';
 import CamperInfo from '../CamperInfo/CamperInfo';
@@ -24,9 +24,9 @@ CamperItem.propTypes = {
   state: string.isRequired,
   type: string.isRequired,
   name: string.isRequired,
-  price: string.isRequired,
-  score: string.isRequired,
-  votes: string.isRequired,
+  price: number.isRequired,
+  score: number.isRequired,
+  votes: number.isRequired,
   image: string.isRequired,
 };
 

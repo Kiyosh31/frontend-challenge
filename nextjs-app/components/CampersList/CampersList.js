@@ -1,9 +1,10 @@
 import React from 'react';
 
+import { shape, arrayOf, string, number, oneOfType } from 'prop-types';
+
 import CamperItem from '../CamperItem/CamperItem';
 
 const CampersList = ({ dataList }) => {
-  console.log(dataList);
   return (
     <div className="campers__container">
       {dataList.map(camper => (
@@ -22,6 +23,26 @@ const CampersList = ({ dataList }) => {
       ))}
     </div>
   );
+};
+
+CampersList.propTypes = {
+  dataList: arrayOf(
+    shape({
+      id: oneOfType([string, number]).isRequired,
+      attributes: shape({
+        location: shape({
+          city: string,
+          state: string,
+        }),
+        type: string,
+        name: string,
+        price: number,
+        score: number,
+        votes: number,
+        image: string,
+      }),
+    }),
+  ),
 };
 
 export default CampersList;
