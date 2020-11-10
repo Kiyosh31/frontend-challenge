@@ -4,12 +4,16 @@ import Title from '../components/Title/Title';
 import SearchBar from '../components/SearchBar/SearchBar';
 import CampersList from '../components/CampersList/CampersList';
 
+import Pagination from '../utils/Pagination';
+
 export default function Home() {
+  const [data] = Pagination('camper-van', 0, 10);
+
   return (
     <div className="max-w-screen-xl mx-auto mt-8 mainpage__body">
       <Title title="Campervans" />
       <SearchBar />
-      <CampersList />
+      <CampersList dataList={data} />
     </div>
   );
 }

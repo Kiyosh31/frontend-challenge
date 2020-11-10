@@ -5,8 +5,7 @@ const CamperInfo = ({ type, city, state, name }) => {
   return (
     <div className="camperinfo__container">
       <p className="camper__info-text">
-        {type} &#8226;
-        {city}, {state}
+        {type} &#8226; {city}, {state}
       </p>
       <p className="camper__info-name">{name}</p>
     </div>
