@@ -278,6 +278,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
 .cirle__image {
@@ -288,6 +289,7 @@ body {
 
 .owner__name {
   margin-left: 1rem;
+  margin-right: 10rem;
   font-size: 1.2rem;
   color: #000;
   font-weight: 600;
@@ -326,6 +328,19 @@ body {
 
   .score__rating {
     font-size: 1rem;
+  }
+
+  .imagedetail__container {
+    margin-top: 0;
+  }
+
+  .camperinfodetail__container {
+    margin-bottom: 3rem;
+    justify-content: center;
+  }
+
+  .infocontainer {
+    margin-right: 10rem;
   }
 }
 
@@ -374,6 +389,37 @@ body {
 
   .score__rating {
     font-size: 1rem;
+  }
+
+  .imagedetail__container {
+    margin-top: 0;
+  }
+
+  .imagedetail__container > .image__container:last-child {
+    display: none;
+  }
+
+  .image__container {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .circle__container {
+    margin-top: -8rem;
+    width: 100px;
+    height: 100px;
+  }
+
+  .camper__detailinfo-text {
+    font-size: 1.3rem;
+  }
+
+  .ownerinfo__container {
+    margin-top: 1.3rem;
+  }
+
+  .owner__name {
+    font-size: 1.3rem;
   }
 }
 
@@ -424,5 +470,36 @@ body {
 
   .score__rating {
     font-size: 1rem;
+  }
+
+  .imagedetail__container {
+    margin-top: 0;
+  }
+
+  .imagedetail__container > .image__container:last-child {
+    display: none;
+  }
+
+  .image__container {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .circle__container {
+    margin-top: -8rem;
+    width: 100px;
+    height: 100px;
+  }
+
+  .camper__detailinfo-text {
+    font-size: 1.3rem;
+  }
+
+  .ownerinfo__container {
+    margin-top: 1.3rem;
+  }
+
+  .owner__name {
+    font-size: 1.3rem;
   }
 }
