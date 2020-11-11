@@ -1,18 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { func, string } from 'prop-types';
 
 import Button from '../Button/Button';
 
-const SearchBar = () => {
-  const [inputValue, setInputValue] = useState('');
-
-  const inputChangedHandler = event => {
-    setInputValue(event.target.value);
-  };
-
-  const submitHandler = event => {
-    event.preventDefault();
-  };
-
+const SearchBar = ({ inputChangedHandler, submitHandler, inputValue }) => {
   return (
     <div>
       <label className="searchbar__label" htmlFor="searchInput">
@@ -27,10 +18,16 @@ const SearchBar = () => {
           onChange={inputChangedHandler}
           value={inputValue}
         />
-        <Button type="submit" text="Filter" style="searchbar__button" click={() => {}} />
+        <Button type="submit" text="Filter" style="searchbar__button" />
       </form>
     </div>
   );
+};
+
+SearchBar.propTypes = {
+  inputChangedHandler: func.isRequired,
+  submitHandler: func.isRequired,
+  inputValue: string.isRequired,
 };
 
 export default SearchBar;

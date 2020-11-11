@@ -3,7 +3,6 @@ import React from 'react';
 import CircleImage from '../CircleImage/CircleImage';
 
 const OwnerInfo = ({ ownerInfo }) => {
-  console.log('ownerInfo', ownerInfo);
   return (
     <div className="ownerinfo__container">
       <CircleImage

@@ -1,5 +1,4 @@
 import React from 'react';
-import { string, shape, arrayOf } from 'prop-types';
 
 import Circle from '../Circle/Circle';
 
@@ -16,22 +15,6 @@ const CamperInfoDetail = ({ info, price }) => {
       <Circle text={price} />
     </div>
   );
-};
-
-CamperInfoDetail.propTypes = {
-  infp: arrayOf(
-    shape({
-      attributes: shape({
-        location: shape({
-          city: string,
-          state: string,
-        }),
-        type: string,
-        name: string,
-      }),
-    }),
-  ),
-  price: string.isRequired,
 };
 
 export default CamperInfoDetail;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { func, string } from 'prop-types';
+import { string } from 'prop-types';
 
 const Button = ({ type, text, click, style }) => {
   return (
@@ -13,7 +13,6 @@ const Button = ({ type, text, click, style }) => {
 Button.propTypes = {
   type: string.isRequired,
   text: string.isRequired,
-  click: func.isRequired,
 };
 
 export default Button;
