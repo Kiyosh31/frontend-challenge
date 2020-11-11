@@ -501,5 +501,6 @@ body {
 
   .owner__name {
     font-size: 1.3rem;
+    margin-right: 4.5rem;
   }
 }
